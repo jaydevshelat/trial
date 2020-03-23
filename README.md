@@ -1,8 +1,8 @@
 # trial
 First Git repo for trial
+
 ## Intent
-Serve as a Guide for anyone to implement or reproduce https://github.com/marvis/pytorch-yolo2 on local computer.
-These instructions and steps were performed on a Desktop computer with following specs:
+Serve as a Guide for anyone to implement or reproduce https://github.com/marvis/pytorch-yolo2 on local computer.  These instructions and steps were performed on a Desktop computer with following specs:
 - CPU: Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
 - RAM: 16GB
 - OS : Ubuntu 19.04 disco 64-bit
@@ -32,7 +32,7 @@ pillow      | 6.1
 ## Implementation Steps
 
 - [x] `git clone https://github.com/marvis/pytorch-yolo2`
-  - Clone the Git repository to your local computer
+  - Clone the Git repository to your local computer. If unfamiliar with Git, please refer to <sup>1</sup> and <sup>2</sup>
 - [x] `cat *.patch | git am`
   - Apply the provided patch file(s) and modify the code to run with latest software versions (such as the ones mentioned above)
     - If you are unfamiliar with Git patches, please consult online resources <sup>3</sup>
@@ -41,13 +41,12 @@ pillow      | 6.1
     - Read the diff / changes for each file <sup>4</sup>
     - Modify each file individually
     - Save and Compile regularly 
-- [x] Follow the detailed steps listed on the Git page
-  - High Level steps with some important notes and changes : 
+- [x] Follow the detailed steps listed on https://github.com/marvis/pytorch-yolo2. High Level steps with some important notes and changes : 
   - Perform detection on Static Image File(s)
   - Perform detection on Video
     - **NOTE** The Git page talks about doing it on Webcam
     - However, Our code is modified to work on an .mp4 video file (any other video file format that is accepted by OpenCV would also work)
-    - The code modification for this was done in demo.py : line `cap = cv2.VideoCapture('./data/office-parkour-caps.mp4')`
+    - The code modification for this was done in demo.py : line `cap = cv2.VideoCapture('./data/office-parkour-caps.mp4')` . *IMP* : Please replace the video file path with as avialable on Your system. 
   - Perform training on local computer
     - This may or may not work on local computer - depend on computer hardware capability (RAM, GPU availability, etc.)
 
