@@ -44,6 +44,10 @@ pillow      | 6.1
     - Save and Compile regularly 
 - [x] Follow the detailed steps listed on https://github.com/marvis/pytorch-yolo2. High Level steps with some important notes and changes : 
   - Perform detection on Static Image File(s)
+```
+wget http://pjreddie.com/media/files/yolo.weights
+python detect.py cfg/yolo.cfg yolo.weights data/dog.jpg
+```
   - Perform detection on Video
     - **NOTE** The origianl code is assuming presence of a webcam 
     - However, the patch modifies the code to work on an .mp4 video file (any other video file format that is accepted by OpenCV would also work)
