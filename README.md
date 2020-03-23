@@ -38,17 +38,19 @@ pillow      | 6.1
   - Apply the provided patch file(s) and modify the code to run with latest software versions (such as the ones mentioned above)
     - If you are unfamiliar with Git patches, please consult online resources <sup>3</sup>
   - Alternatively, You can make the code changes manually as follows:
-    - Open the path file(s) in any text editor (*Tool Tip: Sublime is powerful GUI based editor*)
+    - Open the patch file(s) in any text editor (*Tool Tip: Sublime is powerful GUI based editor*)
     - Read the diff / changes for each file <sup>4</sup>
     - Modify each file individually
     - Save and Compile regularly 
-- [x] Follow the detailed steps listed on https://github.com/marvis/pytorch-yolo2. High Level steps with some important notes and changes : 
-  - Perform detection on Static Image File(s)
+
+- Follow the detailed steps listed on https://github.com/marvis/pytorch-yolo2. High Level steps with some important notes and changes : 
+  - [x] Perform detection on Static Image File(s)
 ```
 wget http://pjreddie.com/media/files/yolo.weights
 python detect.py cfg/yolo.cfg yolo.weights data/dog.jpg
 ```
-  - Perform detection on Video
+  - [x] Perform detection on Video
+  `python demo.py cfg/tiny-yolo-voc.cfg tiny-yolo-voc.weights`
     - **NOTE** The origianl code is assuming presence of a webcam 
     - However, the patch modifies the code to work on an .mp4 video file (any other video file format that is accepted by OpenCV would also work)
       - File name "demo.py" : line `cap = cv2.VideoCapture('./data/office-parkour-caps.mp4')` 
