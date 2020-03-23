@@ -1,7 +1,8 @@
 # trial
 First Git repo for trial
 ## Intent
-Serve as a Guide for anyone to implement or reproduce https://github.com/marvis/pytorch-yolo2 on local computer
+Serve as a Guide for anyone to implement or reproduce https://github.com/marvis/pytorch-yolo2 on local computer. 
+
 These instructions and steps were performed on a Desktop computer with following specs:
 - CPU: Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
 - RAM: 16GB
