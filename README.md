@@ -44,12 +44,12 @@ pillow      | 6.1
     - Save and Compile regularly 
 
 - Follow the detailed steps listed on https://github.com/marvis/pytorch-yolo2. High Level steps with some important notes and changes : 
-  - [x] Perform detection on Static Image File(s) ```
+  - [x] Perform detection on Static Image File(s) 
+  ```
   wget http://pjreddie.com/media/files/yolo.weights
   python detect.py cfg/yolo.cfg yolo.weights data/dog.jpg
   ```
-  - [x] Perform detection on Video
-  `python demo.py cfg/tiny-yolo-voc.cfg tiny-yolo-voc.weights`
+  - [x] Perform detection on Video : `python demo.py cfg/tiny-yolo-voc.cfg tiny-yolo-voc.weights`
     - **NOTE** The origianl code is assuming presence of a webcam 
     - However, the patch modifies the code to work on an .mp4 video file (any other video file format that is accepted by OpenCV would also work)
       - File name "demo.py" : line `cap = cv2.VideoCapture('./data/office-parkour-caps.mp4')` 
